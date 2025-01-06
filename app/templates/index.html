@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BaseMusic</title>
+    <link rel="shortcut icon" href="{{url_for('static',filename='/img/icon.png')}}" type="image/x-icon">
+    <link rel="stylesheet" href="{{url_for('static',filename='/css/style.css')}}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="header">
+                <li class="letter">
+                    <img src="{{url_for('static',filename='/img/icon.png')}}" alt="logo">
+                    <span>BaseMusic</span>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form action="/" method="post">
+            <input class="input" type="text" name="url" placeholder="url" required>
+            <input class="button" type="submit" value="baixar">
+        </form>
+    </main>
+    <footer>
+        <nav>
+            <ul class="footer">
+                <li><span>@v.ii.n.i</span></li>
+                <li><img src="{{url_for('static',filename='/img/github.png')}}" alt="github"></li>
+                <li><img src="{{url_for('static',filename='/img/linkedin.png')}}" alt="linkedin"></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>

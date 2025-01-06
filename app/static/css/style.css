@@ -1,0 +1,114 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-sizing: border-box;
+    --containers-size: 60px;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+main {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: start;
+    width: 100%;
+    height: calc(100% - 2 * var(--containers-size));
+    gap: 1rem;
+    padding: 1rem;
+}
+
+header,
+footer {
+    width: 100%;
+    height: var(--containers-size);
+
+    nav {
+        width: 100%;
+        height: 100%;
+    }
+
+    .header,.footer{
+        list-style: none;
+        display: flex;
+        flex-flow: row nowrap;
+        width: 100%;
+        height: 100%;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0 1rem;
+        gap: 1rem;
+
+        img {
+            width: 1.8rem;
+            cursor: pointer;
+        }
+
+        li{
+            display: flex;
+            flex-flow: row;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+header {
+    .header{
+        .letter {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 1rem;
+        }
+    }
+}
+
+footer {
+    background-color: gray;
+}
+
+form {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: start;
+    gap: 1rem;
+    width: auto;
+
+    * {
+        font-size: 1rem;
+    }
+}
+
+.input {
+    padding: 10px;
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.button {
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: 0 10px 0 black;
+    cursor: pointer;
+    transition: 0.1s ease;
+
+    &:hover {
+        translate: 0 4px;
+        box-shadow: 0 6px 0 black;
+    }
+
+    &:active {
+        translate: 0 8px;
+        box-shadow: 0 2px 0 black;
+    }
+}
