@@ -1,6 +1,9 @@
 from __future__ import unicode_literals
 import yt_dlp as youtube_dl
 
+def progress():
+    print("progress")
+
 try:
     # baixa yt_url para o mesmo diretório no qual o script é executado
     def download_audio(yt_url):

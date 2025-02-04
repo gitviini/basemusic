@@ -29,9 +29,20 @@
     </nav>
     <main>
         <form action="/" method="post" class="container_search_url">
-            <input class="input" type="text" name="url" placeholder="Url" required>
-            <button>Baixar</button>
+            <div class="search_url">
+                <input class="input" type="text" name="url" placeholder="Url" required>
+                <button>Baixar</button>
+            </div>
         </form>
+        <div class="container_music">
+            <div class="container_music_title">
+                <img src="{{url_for('static',filename='/img/icon-line.png')}}" alt="fita k7 icone sem cor">
+                <h2>Músicas</h2>
+            </div>
+            <div class="container_music_component">
+
+            </div>
+        </div>
     </main>
 </body>
 
