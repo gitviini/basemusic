@@ -1,40 +1,44 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BaseMusic</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="shortcut icon" href="{{url_for('static',filename='/img/icon.png')}}" type="image/x-icon">
     <link rel="stylesheet" href="{{url_for('static',filename='/css/style.css')}}">
 </head>
+
 <body>
     <header>
-        <nav>
-            <ul class="header">
-                <li class="letter">
-                    <img src="{{url_for('static',filename='/img/icon.png')}}" alt="logo">
-                    <span>BaseMusic</span>
-                </li>
-                <li>
-                	<span>Light</span>
-                </li>
-            </ul>
-        </nav>
+        <div class="container_search_bar">
+            <input class="search_bar" type="text" placeholder="Pesquisar" />
+            <span class="search_icon">
+                <i class="bi bi-search"></i>
+            </span>
+        </div>
     </header>
+    <nav class="container_nav_bar">
+        <div class="container_profile">
+            <img src="{{url_for('static',filename='/img/icon.png')}}" alt="fita k7 icone">
+        </div>
+        <div class="settings">
+            <i class="bi bi-gear"></i>
+        </div>
+    </nav>
     <main>
-        <form action="/" method="post">
-            <input class="input" type="text" name="url" placeholder="url" required>
-            <input class="button" type="submit" value="baixar">
+        <form action="/" method="post" class="container_search_url">
+            <input class="input" type="text" name="url" placeholder="Url" required>
+            <button>Baixar</button>
         </form>
     </main>
-    <footer>
-        <nav>
-            <ul class="footer">
-                <li><span>@v.ii.n.i</span></li>
-                <li><img src="{{url_for('static',filename='/img/github.png')}}" alt="github"></li>
-                <li><img src="{{url_for('static',filename='/img/linkedin.png')}}" alt="linkedin"></li>
-            </ul>
-        </nav>
-    </footer>
 </body>
+
 </html>
+
+<!--
+<i class="bi bi-search"></i>
+<i class="bi bi-arrow-clockwise"></i>
+<i class="bi bi-check"></i>
+ -->
